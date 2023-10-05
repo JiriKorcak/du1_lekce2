@@ -28,7 +28,7 @@ public class Main {
                 7, 2021, 26,
                 7, 2021);
 
-        Booking booking2 = new Booking(guest1.getJmeno()+guest2.getJmeno(),
+        Booking booking2 = new Booking(guest1.getJmeno()+", " +guest2.getJmeno(),
                 room3.getCisloPokoje(), 1, 9, 2021,
                 14,9,2021);
 
@@ -37,8 +37,15 @@ public class Main {
         bookingList.add(booking1);
         bookingList.add(booking2);
 
-        System.out.println("Počet rezervací: " + bookingList.size());
+        System.out.println("Počet rezervací: " + bookingList.size() + ".");
+        System.out.println(room1);
+        System.out.println(room2);
+        System.out.println(room3);
 
+        // System.out.println(booking1);
+        // System.out.println(booking2);
+
+        System.out.println(bookingList);
 
 
 

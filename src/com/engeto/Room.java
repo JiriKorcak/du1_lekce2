@@ -61,4 +61,27 @@ public class Room {
         this.cenaPokoje = cenaPokoje;
     }
     //endregion
+
+    private String potvrzeniMore() {
+        String answerMore = "Ne";
+        if (jeMore)
+            answerMore = "Ano";
+        return answerMore;
+    }
+    private String potvrzeniBalkon() {
+        String answerBalkon = "Ne";
+        if (jeBalkon)
+            answerBalkon = "Ano";
+        return answerBalkon;
+    }
+
+
+    @Override
+    public String toString() {
+        return  "Pokoj číslo: " + cisloPokoje +
+                ", počet lůžek: " + pocetLuzek +
+                ", balkón: " + potvrzeniBalkon() +
+                ", výhled na moře: " + potvrzeniMore() +
+                ", cena: " + cenaPokoje + " Kč/noc.";
+    }
 }

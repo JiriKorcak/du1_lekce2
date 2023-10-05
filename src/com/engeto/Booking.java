@@ -98,4 +98,16 @@ public class Booking {
         this.rokUkonceni = rokUkonceni;
     }
 //endregion
+
+    @Override
+    public String toString() {
+        return  "Host: " + jménoHosta + '\n' +
+                " číslo pokoje: " + cisloPokoje + '\n' +
+                " datum zahájení: " + denZahajeni +
+                "." + mesicZahajeni +
+                "." + rokZahajeni + '\n'+
+                " datum ukončení: " + denUkonceni +
+                "." + mesicUkonceni +
+                "." + rokUkonceni + '\n';
+    }
 }
