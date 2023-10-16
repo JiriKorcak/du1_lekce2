@@ -1,7 +1,5 @@
 package com.engeto;
 
-import java.time.LocalDate;
-
 public class Booking {
     private String jménoHosta;
     private int cisloPokoje;
