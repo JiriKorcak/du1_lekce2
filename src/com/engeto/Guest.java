@@ -1,23 +1,19 @@
 package com.engeto;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 public class Guest {
-    private String jmeno;
-    private int denNarozeni;
-    private int mesicNatozeni;
-    private int rokNarozeni;
+    private String name;
+    private LocalDate datumNarozeni;
+
 
 
 
     //region kontruktor
 
-    public Guest(String jmeno, int denNarozeni, int mesicNatozeni, int rokNarozeni) {
-        this.jmeno = jmeno;
-        this.denNarozeni = denNarozeni;
-        this.mesicNatozeni = mesicNatozeni;
-        this.rokNarozeni = rokNarozeni;
+    public Guest(String jmeno, LocalDate datumNarozeni) {
+        this.name = jmeno;
+        this.datumNarozeni = datumNarozeni;
     }
 
 
@@ -25,37 +21,31 @@ public class Guest {
 
     //region gettery a settery
 
-
-    public String getJmeno() {
-        return jmeno;
+    public String getName() {
+        return name;
     }
 
-    public void setJmeno(String jmeno) {
-        this.jmeno = jmeno;
+    public void setName(String name) {
+        this.name = name;
     }
 
-       public int getDenNarozeni() {
-        return denNarozeni;
+    public LocalDate getDatumNarozeni() {
+        return datumNarozeni;
     }
 
-    public void setDenNarozeni(int denNarozeni) {
-        this.denNarozeni = denNarozeni;
+    public void setDatumNarozeni(LocalDate datumNarozeni) {
+        this.datumNarozeni = datumNarozeni;
     }
 
-    public int getMesicNatozeni() {
-        return mesicNatozeni;
-    }
 
-    public void setMesicNatozeni(int mesicNatozeni) {
-        this.mesicNatozeni = mesicNatozeni;
-    }
-
-    public int getRokNarozeni() {
-        return rokNarozeni;
-    }
-
-    public void setRokNarozeni(int rokNarozeni) {
-        this.rokNarozeni = rokNarozeni;
-    }
 //endregion
+
+
+    @Override
+    public String toString() {
+        return "Guest{" +
+                "Jméno: " + name + '\'' +
+                ", datum narození: " + datumNarozeni +
+                '}';
+    }
 }

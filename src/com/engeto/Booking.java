@@ -1,111 +1,80 @@
 package com.engeto;
 
+import java.time.LocalDate;
+import java.util.List;
+
 public class Booking {
-    private String jménoHosta;
-    private int cisloPokoje;
-    private int denZahajeni;
-    private int mesicZahajeni;
-    private int rokZahajeni;
-    private int denUkonceni;
-    private int mesicUkonceni;
-    private int rokUkonceni;
+    private static int nextId = 1;
+    private int id = nextId++;
+    private Guest bookingGuest;
+    private List<Guest> otherGuest;
+    private Room bookingRoom;
+    private LocalDate bookingFrom;
+    private LocalDate bookingTo;
+
 
 
     //region konstruktor
 
-    public Booking(String jménoHosta, int cisloPokoje, int denZahajeni,
-                   int mesicZahajeni, int rokZahajeni, int denUkonceni,
-                   int mesicUkonceni, int rokUkonceni) {
-        this.jménoHosta = jménoHosta;
-        this.cisloPokoje = cisloPokoje;
-        this.denZahajeni = denZahajeni;
-        this.mesicZahajeni = mesicZahajeni;
-        this.rokZahajeni = rokZahajeni;
-        this.denUkonceni = denUkonceni;
-        this.mesicUkonceni = mesicUkonceni;
-        this.rokUkonceni = rokUkonceni;
+
+    public Booking(Guest bookingGuest, List<Guest> otherGuest, Room bookingRoom, LocalDate bookingFrom, LocalDate bookingTo) {
+        this.bookingGuest = bookingGuest;
+        this.otherGuest = otherGuest;
+        this.bookingRoom = bookingRoom;
+        this.bookingFrom = bookingFrom;
+        this.bookingTo = bookingTo;
+
     }
 
-
-    //endregion
+//endregion
 
     //region gettery a settery
 
-
-    public String getJménoHosta() {
-        return jménoHosta;
+    public Guest getBookingGuest() {
+        return bookingGuest;
     }
 
-    public void setJménoHosta(String jménoHosta) {
-        this.jménoHosta = jménoHosta;
+    public void setBookingGuest(Guest bookingGuest) {
+        this.bookingGuest = bookingGuest;
     }
 
-    public int getCisloPokoje() {
-        return cisloPokoje;
+    public Room getBookingRoom() {
+        return bookingRoom;
     }
 
-    public void setCisloPokoje(int cisloPokoje) {
-        this.cisloPokoje = cisloPokoje;
+    public void setBookingRoom(Room bookingRoom) {
+        this.bookingRoom = bookingRoom;
     }
 
-    public int getDenZahajeni() {
-        return denZahajeni;
+    public LocalDate getBookingFrom() {
+        return bookingFrom;
     }
 
-    public void setDenZahajeni(int denZahajeni) {
-        this.denZahajeni = denZahajeni;
+    public void setBookingFrom(LocalDate bookingFrom) {
+        this.bookingFrom = bookingFrom;
     }
 
-    public int getMesicZahajeni() {
-        return mesicZahajeni;
+    public LocalDate getBookingTo() {
+        return bookingTo;
     }
 
-    public void setMesicZahajeni(int mesicZahajeni) {
-        this.mesicZahajeni = mesicZahajeni;
+    public void setBookingTo(LocalDate bookingTo) {
+        this.bookingTo = bookingTo;
     }
 
-    public int getRokZahajeni() {
-        return rokZahajeni;
+    public void setId(int id) {
+        this.id = id;
     }
+    //endregion
 
-    public void setRokZahajeni(int rokZahajeni) {
-        this.rokZahajeni = rokZahajeni;
-    }
-
-    public int getDenUkonceni() {
-        return denUkonceni;
-    }
-
-    public void setDenUkonceni(int denUkonceni) {
-        this.denUkonceni = denUkonceni;
-    }
-
-    public int getMesicUkonceni() {
-        return mesicUkonceni;
-    }
-
-    public void setMesicUkonceni(int mesicUkonceni) {
-        this.mesicUkonceni = mesicUkonceni;
-    }
-
-    public int getRokUkonceni() {
-        return rokUkonceni;
-    }
-
-    public void setRokUkonceni(int rokUkonceni) {
-        this.rokUkonceni = rokUkonceni;
-    }
-//endregion
 
     @Override
     public String toString() {
-        return  "Host: " + jménoHosta + '\n' +
-                " číslo pokoje: " + cisloPokoje + '\n' +
-                " datum zahájení: " + denZahajeni +
-                "." + mesicZahajeni +
-                "." + rokZahajeni + '\n'+
-                " datum ukončení: " + denUkonceni +
-                "." + mesicUkonceni +
-                "." + rokUkonceni + '\n';
+        return "Booking{" +
+                "Rezervace č." + id + " Host: " + bookingGuest +
+                "\n" + bookingRoom +
+                ", Datum od: " + bookingFrom +
+                ", Datum do: " + bookingTo +
+                '}';
     }
 }
