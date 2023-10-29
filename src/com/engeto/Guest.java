@@ -43,9 +43,6 @@ public class Guest {
 
     @Override
     public String toString() {
-        return "Guest{" +
-                "Jméno: " + name + '\'' +
-                ", datum narození: " + datumNarozeni +
-                '}';
+        return "Jméno: " + name + ", datum narození: " + datumNarozeni;
     }
 }

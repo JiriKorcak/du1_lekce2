@@ -1,28 +1,34 @@
 package com.engeto;
 
 import java.time.LocalDate;
+
 import java.util.List;
 
 public class Booking {
     private static int nextId = 1;
     private int id = nextId++;
-    private Guest bookingGuest;
-    private List<Guest> otherGuest;
+    private List<Guest> guests;
     private Room bookingRoom;
     private LocalDate bookingFrom;
     private LocalDate bookingTo;
+    private Recreation recreation;
+
+    public enum Recreation{
+        WORK,
+        HOLIDAY
+    }
 
 
 
     //region konstruktor
 
 
-    public Booking(Guest bookingGuest, List<Guest> otherGuest, Room bookingRoom, LocalDate bookingFrom, LocalDate bookingTo) {
-        this.bookingGuest = bookingGuest;
-        this.otherGuest = otherGuest;
+    public Booking(List<Guest> guests, Room bookingRoom, LocalDate bookingFrom, LocalDate bookingTo, Recreation recreation) {
+        this.guests = guests;
         this.bookingRoom = bookingRoom;
         this.bookingFrom = bookingFrom;
         this.bookingTo = bookingTo;
+        this.recreation = recreation;
 
     }
 
@@ -30,13 +36,6 @@ public class Booking {
 
     //region gettery a settery
 
-    public Guest getBookingGuest() {
-        return bookingGuest;
-    }
-
-    public void setBookingGuest(Guest bookingGuest) {
-        this.bookingGuest = bookingGuest;
-    }
 
     public Room getBookingRoom() {
         return bookingRoom;
@@ -62,19 +61,42 @@ public class Booking {
         this.bookingTo = bookingTo;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public List<Guest> getGuests() {
+        return guests;
     }
+
+    public void setGuests(List<Guest> guests) {
+        this.guests = guests;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Recreation getRecreation() {
+        return recreation;
+    }
+
+    public void setRecreation(Recreation recreation) {
+        this.recreation = recreation;
+    }
+
     //endregion
+    private String isWork() {
+        String printIsWork = "Pracovní";
+        if (recreation == Recreation.HOLIDAY)
+            printIsWork = "Rekreační";
+        return printIsWork;
+
+    }
 
 
     @Override
     public String toString() {
-        return "Booking{" +
-                "Rezervace č." + id + " Host: " + bookingGuest +
+        return  "Rezervace č." + id + ": \n Host: " + getGuests() +
                 "\n" + bookingRoom +
                 ", Datum od: " + bookingFrom +
-                ", Datum do: " + bookingTo +
-                '}';
+                ", Datum do: " + bookingTo + ", pobyt je: " + isWork() +
+                ". \n";
     }
 }
