@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c5bf027-a7a0-40e8-8a03-e1079327ca85" name="Changes" comment="Opravený počet hostů v třídě Booking a výpis Room a Booking.">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="2c5bf027-a7a0-40e8-8a03-e1079327ca85" name="Changes" comment="rozpracovaný BookingManager.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/engeto/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/engeto/BookingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/BookingManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/engeto/Guest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/Guest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +90,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698613678801</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="rozpracovaný BookingManager.">
+      <option name="closed" value="true" />
+      <created>1698622793386</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1698622793386</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -102,6 +106,7 @@
     <MESSAGE value="upravené výpisy tříd." />
     <MESSAGE value="upravené atributy Guest a Room v třídě Booking. A přidám do třídy Booking List s hosty, ale nefunguje." />
     <MESSAGE value="Opravený počet hostů v třídě Booking a výpis Room a Booking." />
-    <option name="LAST_COMMIT_MESSAGE" value="Opravený počet hostů v třídě Booking a výpis Room a Booking." />
+    <MESSAGE value="rozpracovaný BookingManager." />
+    <option name="LAST_COMMIT_MESSAGE" value="rozpracovaný BookingManager." />
   </component>
 </project>

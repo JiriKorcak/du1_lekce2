@@ -72,20 +72,15 @@ public class Main {
             System.out.println(room);
         }
 
-        System.out.println("Počet rezervací: " + bookingList.size() + ". \n" + bookingList);
-
         BookingManager bookingManager = new BookingManager(bookingList);
 
         bookingManager.addBooking(booking3);
 
-      //  System.out.println("+++++++++++++ \n Počet rezervací: " + bookingList.size() + ". \n" + bookingList);
-        // booking.get(0)
-
-
-
-
-
-
+        for (Booking booking : bookingList){
+            System.out.println("--------------- \n Objednávka č."+ booking.getId() + "\n" +
+                    "Hosté: " + booking.getGuests() + "\n pokoj č." + booking.getBookingRoom().getCisloPokoje() +
+                    "\n Od " + booking.getBookingFrom() + " do " + booking.getBookingTo());
+        }
 
     }
 }
