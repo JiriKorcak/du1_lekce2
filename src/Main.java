@@ -81,6 +81,5 @@ public class Main {
                     "Hosté: " + booking.getGuests() + "\n pokoj č." + booking.getBookingRoom().getCisloPokoje() +
                     "\n Od " + booking.getBookingFrom() + " do " + booking.getBookingTo());
         }
-
     }
 }
