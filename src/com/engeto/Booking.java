@@ -65,6 +65,7 @@ public class Booking {
         return guests;
     }
 
+
     public void setGuests(List<Guest> guests) {
         this.guests = guests;
     }
@@ -75,6 +76,15 @@ public class Booking {
 
     public Recreation getRecreation() {
         return recreation;
+    }
+    public int getNumberOfGuest(){
+        return guests.size();
+    }
+    public Guest getFirstGuest(){
+        return guests.get(0);
+    }
+    private int printGuestsSize(){
+        return guests.size();
     }
 
     public void setRecreation(Recreation recreation) {
@@ -90,13 +100,10 @@ public class Booking {
 
     }
 
-
     @Override
     public String toString() {
-        return  "Rezervace č." + id + ": \n Host: " + getGuests() +
-                "\n" + bookingRoom +
-                ", Datum od: " + bookingFrom +
-                ", Datum do: " + bookingTo + ", pobyt je: " + isWork() +
-                ". \n";
+        return  "--------------- \n" + bookingFrom + " až " + bookingTo + ": " +
+                getFirstGuest() + '[' + printGuestsSize()+ ", " + bookingRoom.printIsSea() +']' +
+                " za: " + bookingRoom.getPriceOfRoom() + ". \n";
     }
 }

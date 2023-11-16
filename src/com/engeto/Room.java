@@ -2,86 +2,86 @@ package com.engeto;
 
 public class Room {
 
-    private int cisloPokoje;
-    private int pocetLuzek;
-    private boolean jeBalkon;
-    private boolean jeMore;
-    private int cenaPokoje;
+    private int numberOfRoom;
+    private int numberOfBeds;
+    private boolean isBalcony;
+    private boolean isSea;
+    private int priceOfRoom;
 
     //region konstruktory
 
-    public Room(int cisloPokoje, int pocetLuzek, boolean jeBalkon, boolean jeMore, int cenaPokoje) {
-        this.cisloPokoje = cisloPokoje;
-        this.pocetLuzek = pocetLuzek;
-        this.jeBalkon = jeBalkon;
-        this.jeMore = jeMore;
-        this.cenaPokoje = cenaPokoje;
+    public Room(int numberOfRoom, int numberOfBeds, boolean isBalcony, boolean isSea, int priceOfRoom) {
+        this.numberOfRoom = numberOfRoom;
+        this.numberOfBeds = numberOfBeds;
+        this.isBalcony = isBalcony;
+        this.isSea = isSea;
+        this.priceOfRoom = priceOfRoom;
     }
     //endregion
 
     //region gettery a settery
 
-    public int getCisloPokoje() {
-        return cisloPokoje;
+    public int getNumberOfRoom() {
+        return numberOfRoom;
     }
 
-    public void setCisloPokoje(int cisloPokoje) {
-        this.cisloPokoje = cisloPokoje;
+    public void setNumberOfRoom(int numberOfRoom) {
+        this.numberOfRoom = numberOfRoom;
     }
 
-    public int getPocetLuzek() {
-        return pocetLuzek;
+    public int getNumberOfBeds() {
+        return numberOfBeds;
     }
 
-    public void setPocetLuzek(int pocetLuzek) {
-        this.pocetLuzek = pocetLuzek;
+    public void setNumberOfBeds(int numberOfBeds) {
+        this.numberOfBeds = numberOfBeds;
     }
 
-    public boolean isJeBalkon() {
-        return jeBalkon;
+    public boolean isBalcony() {
+        return isBalcony;
     }
 
-    public void setJeBalkon(boolean jeBalkon) {
-        this.jeBalkon = jeBalkon;
+    public void setBalcony(boolean balcony) {
+        this.isBalcony = balcony;
     }
 
-    public boolean isJeMore() {
-        return jeMore;
+    public boolean isSea() {
+        return isSea;
     }
 
-    public void setJeMore(boolean jeMore) {
-        this.jeMore = jeMore;
+    public void setSea(boolean sea) {
+        this.isSea = sea;
     }
 
-    public int getCenaPokoje() {
-        return cenaPokoje;
+    public int getPriceOfRoom() {
+        return priceOfRoom;
     }
 
-    public void setCenaPokoje(int cenaPokoje) {
-        this.cenaPokoje = cenaPokoje;
+    public void setPriceOfRoom(int priceOfRoom) {
+        this.priceOfRoom = priceOfRoom;
     }
     //endregion
 
-    private String potvrzeniMore() {
-        String answerMore = "Ne";
-        if (jeMore)
-            answerMore = "Ano";
-        return answerMore;
+    public String printIsSea() {
+        String answerSea = "Ne";
+        if (isSea)
+            answerSea = "Ano";
+        return answerSea;
     }
-    private String potvrzeniBalkon() {
-        String answerBalkon = "Ne";
-        if (jeBalkon)
-            answerBalkon = "Ano";
-        return answerBalkon;
+    private String printIsBalcony() {
+        String answerBalcony = "Ne";
+        if (isBalcony)
+            answerBalcony = "Ano";
+        return answerBalcony;
     }
 
 
     @Override
     public String toString() {
-        return  "Pokoj číslo: " + cisloPokoje +
-                ", počet lůžek: " + pocetLuzek +
-                ", balkón: " + potvrzeniBalkon() +
-                ", výhled na moře: " + potvrzeniMore() +
-                ", cena: " + cenaPokoje + " Kč/noc.";
+        return  "Pokoj číslo: " + numberOfRoom +
+                ", počet lůžek: " + numberOfBeds +
+                ", balkón: " + printIsBalcony() +
+                ", výhled na moře: " + printIsSea() +
+                ", cena: " + priceOfRoom + " Kč/noc.";
     }
 }

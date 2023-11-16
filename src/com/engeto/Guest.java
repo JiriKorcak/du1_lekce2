@@ -4,16 +4,16 @@ import java.time.LocalDate;
 
 public class Guest {
     private String name;
-    private LocalDate datumNarozeni;
+    private LocalDate dateOfBirth;
 
 
 
 
     //region kontruktor
 
-    public Guest(String jmeno, LocalDate datumNarozeni) {
+    public Guest(String jmeno, LocalDate dateOfBirth) {
         this.name = jmeno;
-        this.datumNarozeni = datumNarozeni;
+        this.dateOfBirth = dateOfBirth;
     }
 
 
@@ -29,12 +29,12 @@ public class Guest {
         this.name = name;
     }
 
-    public LocalDate getDatumNarozeni() {
-        return datumNarozeni;
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public void setDatumNarozeni(LocalDate datumNarozeni) {
-        this.datumNarozeni = datumNarozeni;
+    public void setDateOfBirth(LocalDate dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
 
@@ -43,6 +43,6 @@ public class Guest {
 
     @Override
     public String toString() {
-        return "Jméno: " + name + ", datum narození: " + datumNarozeni;
+        return "Jméno: " + name + " (" + dateOfBirth + ")";
     }
 }
