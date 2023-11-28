@@ -54,7 +54,32 @@ public class BookingManager {
         System.out.println("\n Průměrný počet hostů na rezervaci: " + averageGuestFormat.format(averageGuest) + "." );
     }
 
+    public void printBookingList() {
+        System.out.println(bookingList);
+    }
 
+    public void printHolidayBooking(int x){
+        for (int i = 0; i < x; ){
+            for(Booking booking : bookingList) {
+                if (booking.getRecreation() == HOLIDAY) System.out.println(booking);
+                i++;
+            }
+        }
+    }
+
+    public void printGuestStatistics() {
+        int oneGuestStats = 0;
+        int twoGuestStats = 0;
+        int moreGuestsStats = 0;
+        for (Booking booking : bookingList) {
+            if (booking.getNumberOfGuest() < 2) oneGuestStats++;
+            else if (booking.getNumberOfGuest() == 2) twoGuestStats++;
+            else if (booking.getNumberOfGuest() > 2) moreGuestsStats++;
+        }
+        System.out.println("+++++++++\n Rezervací s jedním hostem: " + oneGuestStats +
+                            "\n Rezervací se dvěma hosty: " + twoGuestStats +
+                            "\n Rezervací s třemi a více hosty: " + moreGuestsStats);
+    }
 
 
 }

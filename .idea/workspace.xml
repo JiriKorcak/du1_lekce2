@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c5bf027-a7a0-40e8-8a03-e1079327ca85" name="Changes" comment="upravený výpis objednávek.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="2c5bf027-a7a0-40e8-8a03-e1079327ca85" name="Changes" comment="Rozpracované metody v BookingManager a nefunkční metody v Main.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/engeto/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/Booking.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/engeto/BookingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/BookingManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/engeto/Guest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/Guest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/engeto/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/Room.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +116,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699041243466</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Rozpracované metody v BookingManager a nefunkční metody v Main.">
+      <option name="closed" value="true" />
+      <created>1700151813535</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1700151813535</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -129,6 +134,7 @@
     <MESSAGE value="Opravený počet hostů v třídě Booking a výpis Room a Booking." />
     <MESSAGE value="rozpracovaný BookingManager." />
     <MESSAGE value="upravený výpis objednávek." />
-    <option name="LAST_COMMIT_MESSAGE" value="upravený výpis objednávek." />
+    <MESSAGE value="Rozpracované metody v BookingManager a nefunkční metody v Main." />
+    <option name="LAST_COMMIT_MESSAGE" value="Rozpracované metody v BookingManager a nefunkční metody v Main." />
   </component>
 </project>

@@ -119,19 +119,17 @@ public class Main {
 
         bookingList.add(booking16);
 
-//          Tohle nefunguje a nevim proč.
-//        private static void printBookingList() {
-//          System.out.println(bookingList);
-//        }
-        private static void printFirstFiveBooking(List<Booking> bookingList){
-            for (int i = 0; i < 8; i++){
-                for(Booking booking : bookingList) {
-                    if (booking.getRecreation() == HOLIDAY) System.out.println(bookingList.get(i));
-                }
-            }
-        }
+        bookingManager.printHolidayBooking(2);
 
+        bookingManager.printGuestStatistics();
 
+        System.out.println(booking2.getBookingLength());
+
+        booking2.printBookingLength();
+
+        System.out.println(booking2.getPrice());
+
+        booking2.printPrice();
 
 
 

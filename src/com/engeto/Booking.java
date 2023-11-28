@@ -4,6 +4,8 @@ import java.time.LocalDate;
 
 import java.util.List;
 
+import static java.time.temporal.ChronoUnit.DAYS;
+
 public class Booking {
     private static int nextId = 1;
     private int id = nextId++;
@@ -100,6 +102,23 @@ public class Booking {
 
     }
 
+    public long getBookingLength() {
+        long daysBetween = DAYS.between(bookingFrom, bookingTo);
+        daysBetween++;
+        return daysBetween;
+            }
+
+    public void printBookingLength() {
+        System.out.println ("Délka rezervace č." + id + " je " + getBookingLength() + " dnů.");
+            }
+    public long getPrice() {
+        long daysBetween = getBookingLength();
+        return daysBetween * bookingRoom.getPriceOfRoom();
+    }
+
+    public void printPrice() {
+        System.out.println ("Cena rezervace č." + id + " je " + getPrice() + " dnů.");
+    }
     @Override
     public String toString() {
         return  "--------------- \n" + bookingFrom + " až " + bookingTo + ": " +
