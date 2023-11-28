@@ -117,7 +117,7 @@ public class Booking {
     }
 
     public void printPrice() {
-        System.out.println ("Cena rezervace č." + id + " je " + getPrice() + " dnů.");
+        System.out.println ("Cena rezervace č." + id + " je " + getPrice() + ",-Kč.");
     }
     @Override
     public String toString() {
