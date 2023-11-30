@@ -13,9 +13,9 @@ public class Booking {
     private Room bookingRoom;
     private LocalDate bookingFrom;
     private LocalDate bookingTo;
-    private Recreation recreation;
+    private TypeOfStay typeOfStay;
 
-    public enum Recreation{
+    public enum TypeOfStay {
         WORK,
         HOLIDAY
     }
@@ -25,12 +25,12 @@ public class Booking {
     //region konstruktor
 
 
-    public Booking(List<Guest> guests, Room bookingRoom, LocalDate bookingFrom, LocalDate bookingTo, Recreation recreation) {
+    public Booking(List<Guest> guests, Room bookingRoom, LocalDate bookingFrom, LocalDate bookingTo, TypeOfStay typeOfStay) {
         this.guests = guests;
         this.bookingRoom = bookingRoom;
         this.bookingFrom = bookingFrom;
         this.bookingTo = bookingTo;
-        this.recreation = recreation;
+        this.typeOfStay = typeOfStay;
 
     }
 
@@ -76,8 +76,8 @@ public class Booking {
         return id;
     }
 
-    public Recreation getRecreation() {
-        return recreation;
+    public TypeOfStay getTypeOfStay() {
+        return typeOfStay;
     }
     public int getNumberOfGuest(){
         return guests.size();
@@ -89,14 +89,14 @@ public class Booking {
         return guests.size();
     }
 
-    public void setRecreation(Recreation recreation) {
-        this.recreation = recreation;
+    public void setRecreation(TypeOfStay typeOfStay) {
+        this.typeOfStay = typeOfStay;
     }
 
     //endregion
     private String isWork() {
         String printIsWork = "Pracovní";
-        if (recreation == Recreation.HOLIDAY)
+        if (typeOfStay.equals(TypeOfStay.HOLIDAY))
             printIsWork = "Rekreační";
         return printIsWork;
 

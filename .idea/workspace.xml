@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2c5bf027-a7a0-40e8-8a03-e1079327ca85" name="Changes" comment="Hotový úkol 3.">
+    <list default="true" id="2c5bf027-a7a0-40e8-8a03-e1079327ca85" name="Changes" comment="Hotový úkol 3.&#10;Úprava výpisu metody">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/engeto/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/engeto/BookingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/engeto/BookingManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +132,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701167230117</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Hotový úkol 3.&#10;Úprava výpisu metody">
+      <option name="closed" value="true" />
+      <created>1701168473695</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1701168473696</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -141,6 +152,7 @@
     <MESSAGE value="upravený výpis objednávek." />
     <MESSAGE value="Rozpracované metody v BookingManager a nefunkční metody v Main." />
     <MESSAGE value="Hotový úkol 3." />
-    <option name="LAST_COMMIT_MESSAGE" value="Hotový úkol 3." />
+    <MESSAGE value="Hotový úkol 3.&#10;Úprava výpisu metody" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hotový úkol 3.&#10;Úprava výpisu metody" />
   </component>
 </project>

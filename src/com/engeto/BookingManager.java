@@ -3,8 +3,8 @@ package com.engeto;
 import java.text.DecimalFormat;
 import java.util.List;
 
-import static com.engeto.Booking.Recreation.HOLIDAY;
-import static com.engeto.Booking.Recreation.WORK;
+import static com.engeto.Booking.TypeOfStay.HOLIDAY;
+import static com.engeto.Booking.TypeOfStay.WORK;
 
 public class BookingManager {
 
@@ -27,23 +27,23 @@ public class BookingManager {
     }
 
     public List<Booking> getBookings(){
-        return bookingList;
+        List<Booking> getBookingList = bookingList;
+        return getBookingList;
     }
 
     public void clearBookings(){
         bookingList.clear();
     }
 
-    public static void getNumberOfWorkingBookings(List<Booking> bookingList) {
+    public int getNumberOfWorkingBookings(List<Booking> bookingList) {
         int counter = 0;
         for (Booking booking : bookingList) {
-            if (booking.getRecreation() == WORK) counter++;
+            if (booking.getTypeOfStay().equals(WORK)) counter++;
         }
-        System.out.println("\n Počet pracovních rekreací: " + counter + ".");
-
+            return counter;
     }
 
-    public static void getAverageGuest(List<Booking> bookingList) {
+    public String getAverageGuest(List<Booking> bookingList) {
         double counterGuests = 0;
         for (Booking booking : bookingList) {
             counterGuests = booking.getNumberOfGuest() + counterGuests;
@@ -51,7 +51,7 @@ public class BookingManager {
         double averageGuest = counterGuests / bookingList.size();
         DecimalFormat averageGuestFormat = new DecimalFormat();
         averageGuestFormat.setMaximumFractionDigits(1);
-        System.out.println("\n Průměrný počet hostů na rezervaci: " + averageGuestFormat.format(averageGuest) + "." );
+        return averageGuestFormat.format(averageGuest);
     }
 
     public void printBookingList() {
@@ -59,27 +59,17 @@ public class BookingManager {
     }
 
     public void printHolidayBooking(int x){
-        for (int i = 0; i < x; ){
+        int i = 0;
             for(Booking booking : bookingList) {
-                if (booking.getRecreation() == HOLIDAY) System.out.println(booking);
-                i++;
+                if (i == x) break;
+                else if (booking.getTypeOfStay().equals(HOLIDAY)) {
+                        System.out.println(booking);
+                        i++;
+                }
             }
         }
-    }
 
-    public void printGuestStatistics() {
-        int oneGuestStats = 0;
-        int twoGuestStats = 0;
-        int moreGuestsStats = 0;
-        for (Booking booking : bookingList) {
-            if (booking.getNumberOfGuest() < 2) oneGuestStats++;
-            else if (booking.getNumberOfGuest() == 2) twoGuestStats++;
-            else if (booking.getNumberOfGuest() > 2) moreGuestsStats++;
-        }
-        System.out.println("+++++++++\n Rezervací s jedním hostem: " + oneGuestStats +
-                            "\n Rezervací se dvěma hosty: " + twoGuestStats +
-                            "\n Rezervací s třemi a více hosty: " + moreGuestsStats);
-    }
+
 
 
 }

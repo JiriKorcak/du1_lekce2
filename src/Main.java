@@ -7,11 +7,11 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.engeto.Booking.Recreation.HOLIDAY;
-import static com.engeto.Booking.Recreation.WORK;
+import static com.engeto.Booking.TypeOfStay.WORK;
 
 
 public class Main {
+
     public static void main(String[] args) {
 
         Guest guest1 = new Guest("Adéla Malíková ",
@@ -36,7 +36,7 @@ public class Main {
 
         Booking booking1 = new Booking(List.of(guest1), room1,
                 LocalDate.of(2021, 7, 19),
-                LocalDate.of(2021, 7, 26), Booking.Recreation.HOLIDAY);
+                LocalDate.of(2021, 7, 26), Booking.TypeOfStay.HOLIDAY);
 
         Booking booking2 = new Booking(List.of(guest1, guest2), room3,
                 LocalDate.of(2021, 9, 1),
@@ -79,9 +79,9 @@ public class Main {
 //        bookingManager.clearBookings();
 //        System.out.println(bookingList);
 
-        BookingManager.getNumberOfWorkingBookings(bookingList);
 
-        BookingManager.getAverageGuest(bookingList);
+
+
 
         Guest guest4 = new Guest("Karel Dvořák",
                 LocalDate.of(1990, 5, 15));
@@ -98,9 +98,10 @@ public class Main {
 
         Booking booking5 = new Booking(List.of(guest5), room2,
                 LocalDate.of(2023,7,18),
-                LocalDate.of(2023,7,21), Booking.Recreation.HOLIDAY);
+                LocalDate.of(2023,7,21), Booking.TypeOfStay.HOLIDAY);
 
-
+        bookingList.add(booking4);
+        bookingList.add(booking5);
 
 
 
@@ -111,27 +112,48 @@ public class Main {
             bookingDate = bookingDate.plusDays(2);
         }
 
-//        System.out.println(bookingList);
+
 
         Booking booking16 = new Booking(List.of(guest6), room2,
                 LocalDate.of(2023,8,1),
-                LocalDate.of(2023,8,31), Booking.Recreation.HOLIDAY);
+                LocalDate.of(2023,8,31), Booking.TypeOfStay.HOLIDAY);
 
         bookingList.add(booking16);
 
-        bookingManager.printHolidayBooking(2);
+        System.out.println("\n Počet pracovních rekreací: " + bookingManager.getNumberOfWorkingBookings(bookingList) + ".");
 
-        bookingManager.printGuestStatistics();
+        System.out.println("\n Průměrný počet hostů na rezervaci: " + bookingManager.getAverageGuest(bookingList) + "." );
 
-        System.out.println(booking2.getBookingLength());
+        bookingManager.printHolidayBooking(8);
 
-        booking2.printBookingLength();
+        printGuestStatistics(bookingList);
+//
+//        System.out.println(booking2.getBookingLength());
+//
+//        booking2.printBookingLength();
+//
+//        System.out.println(booking2.getPrice());
+//
+//        booking2.printPrice();
+    printBookingList(bookingList);
 
-        System.out.println(booking2.getPrice());
-
-        booking2.printPrice();
 
 
-
+    }
+    public static void printBookingList(List<Booking>bookingList) {
+        System.out.println(bookingList);
+    }
+    public static void printGuestStatistics(List<Booking> bookingList) {
+        int oneGuestStats = 0;
+        int twoGuestStats = 0;
+        int moreGuestsStats = 0;
+        for (Booking booking : bookingList) {
+            if (booking.getNumberOfGuest() < 2) oneGuestStats++;
+            else if (booking.getNumberOfGuest() == 2) twoGuestStats++;
+            else if (booking.getNumberOfGuest() > 2) moreGuestsStats++;
+        }
+        System.out.println("+++++++++\n Rezervací s jedním hostem: " + oneGuestStats +
+                "\n Rezervací se dvěma hosty: " + twoGuestStats +
+                "\n Rezervací s třemi a více hosty: " + moreGuestsStats);
     }
 }
